@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title>Abdelkhalek Offline</title>
+    <link rel="icon" type="image/svg+xml" href="asset/favicon.svg" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <h1 class="title">Abdelkhalek Offline</h1>
+    <header>
+      <label>فاتورة مبيعات</label>
+      <div>
+        <label for="inovice-open-time">توقيت الفتح</label>
+        <input
+          type="text"
+          id="inovice-open-time"
+          name="inovice-open-time"
+          placeholder="<توقيت الفتح>"
+          disabled
+        />
+      </div>
+    </header>
+    <main>
+      <div id="inovice-form">
+        <div class="upper">
+          <div>
+            <label for="inovice-id">رقم الفاتورة</label>
+            <input
+              type="text"
+              id="inovice-id"
+              name="inovice-id"
+              placeholder="<رقم الفاتورة>"
+              disabled
+            />
+          </div>
+          <div>
+            <label for="inovice-date">التاريخ</label>
+            <input
+              type="text"
+              id="inovice-date"
+              name="inovice-date"
+              placeholder="<التاريخ>"
+              disabled
+            />
+          </div>
+          <div class="inovice-item-name">
+            <label for="inovice-item-name">الصنف</label>
+            <input
+              type="text"
+              id="inovice-item-name"
+              name="inovice-item-name"
+              disabled
+            />
+          </div>
+        </div>
+        <div class="lower">
+          <div>
+            <label for="inovice-notes">ملاحظـــات</label>
+            <input type="text" id="inovice-notes" name="inovice-notes" />
+          </div>
+        </div>
+      </div>
+      <div id="inovice-list">
+        <div id="inovice-items">
+          <table>
+            <thead>
+              <tr>
+                <th>&ensp;</th>
+                <th>كود الصنف</th>
+                <th>كود دولي</th>
+                <th>اسم الصنف</th>
+                <th>اسم الصنف انجليزي</th>
+                <th>العبوة</th>
+                <th>السعر</th>
+                <th>الكمية</th>
+                <th>سعر بيع</th>
+                <th>القيمة</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr id="inovice-item">
+                <td data-id="control">&ensp;</td>
+                <td>
+                  <input type="text" data-id="code" autofocus />
+                </td>
+                <td>
+                  <input type="text" data-id="international-code" />
+                </td>
+                <td>
+                  <input type="text" data-id="item-name" />
+                </td>
+                <td>
+                  <input type="text" data-id="english-name" />
+                </td>
+                <td>
+                  <input data-id="unit" type="number" min="0" />
+                </td>
+                <td data-id="price"></td>
+                <td>
+                  <input data-id="quantity" type="number" min="0" />
+                </td>
+                <td>
+                  <input data-id="sell-price" type="number" min="0" />
+                </td>
+                <td data-id="value"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- <div id="inovice-items-log">...</div> -->
+      </div>
+    </main>
+    <footer>
+      السجل:
+      <button id="btn-first-inovice" class="btn-log">⏭</button>
+      <button id="btn-prev-inovice" class="btn-log">▶</button>
+      <input type="number" min="1" id="inovice-index" />
+      <button id="btn-next-inovice" class="btn-log">◀</button>
+      <button id="btn-last-inovice" class="btn-log">⏮</button>
+      <label>من</label>
+      <label id="inovice-count"></label>
+      <input
+        type="button"
+        id="inovice-print-lang"
+        name="inovice-print-lang"
+        placeholder="<لغة الطباعة>"
+      />
+      <label for="inovice-print-lang">لغة الطباعة</label>
+      <button id="btn-new-inovice">جديد</button>
+      <button id="btn-del-inovice">حذف</button>
+      <button id="print-inovice">طباعة</button>
+      <label for="inovice-total">الاجمالي</label>
+      <input
+        type="text"
+        id="inovice-total"
+        name="inovice-total"
+        placeholder="0"
+        disabled
+      />
+    </footer>
+    <h5 class="footer">
+      ~* Made with ❤️ by
+      <a href="https://github.com/ibrahemesam" target="_blank">Ibrahem</a> *~
+    </h5>
+    <!-- THANK YOU, https://sql.js.org -->
+    <script src="js/3rd-party/sql.js/sql-wasm.js"></script>
+    <!-- THANK YOU, https://github.com/Joe12387/detectIncognito -->
+    <script src="js/3rd-party/_detectIncognito.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
