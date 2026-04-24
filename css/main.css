@@ -198,6 +198,10 @@ body footer {
   display: flex;
   flex-direction: row;
 }
+body footer label {
+  display: flex;
+  align-items: center;
+}
 body footer button,
 body footer input[type=button],
 body footer .btn,
@@ -322,9 +326,4 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield; /* Firefox */
   appearance: textfield;
-}
-
-label {
-  display: flex;
-  align-items: center;
 }
