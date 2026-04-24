@@ -30,6 +30,8 @@ body {
   background-color: #e8e6d2;
 }
 body > header {
+  display: flex;
+  flex-direction: row;
   border-radius: 2px;
   border-bottom: black solid 2px;
   background-color: #00cec9;
@@ -40,12 +42,16 @@ body > header label {
   font-weight: 500;
   color: #000e5d;
 }
+body > header > label {
+  flex: 1;
+}
 body > header > div {
-  display: inline-block;
-  position: absolute;
-  width: fit-content;
-  left: 0.5em;
-  width: 35%;
+  display: flex;
+  flex-direction: row;
+}
+body > header > div label {
+  min-width: fit-content;
+  margin-left: 2%;
 }
 body > header > div input#inovice-open-time {
   margin-left: 1em;
@@ -56,7 +62,7 @@ body > header > div input#inovice-open-time {
   font-size: x-large;
   color: #7a0008;
   background-color: #f6f0c8;
-  width: 40%;
+  width: 20%;
   padding-bottom: 5px;
 }
 body > main {
