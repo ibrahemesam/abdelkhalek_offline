@@ -273,6 +273,7 @@ body footer button#btn-prev-inovice, body footer button#btn-next-inovice {
 }
 body footer button#btn-first-inovice {
   margin-right: 0.25em;
+  margin-left: 0;
 }
 body footer button:disabled {
   background-color: unset;
