@@ -70,6 +70,7 @@ body > header > div input#inovice-open-time {
 body > main {
   display: flex;
   flex-direction: column;
+  min-height: 0;
   flex: 1;
 }
 body > main div#inovice-form {
@@ -102,6 +103,8 @@ body > main div#inovice-form .inovice-item-name {
 body > main div#inovice-list {
   flex: 1;
   display: flex;
+  min-height: 0;
+  overflow-y: auto;
   flex-direction: column;
 }
 body > main div#inovice-items {
@@ -112,11 +115,11 @@ body > main div#inovice-items {
 body > main div#inovice-items table {
   border: rgba(0, 0, 0, 0.6) solid 1px;
   width: 100%;
-  overflow-y: auto;
   background-color: #efeee2;
   font-size: 110%;
 }
 body > main div#inovice-items table th {
+  position: sticky;
   border: rgb(0, 0, 0) solid 1px;
   margin: 0;
   padding-left: 10px;
@@ -202,7 +205,6 @@ body > * {
   padding: 0.5em;
 }
 body footer {
-  overflow: hidden;
   display: flex;
   flex-direction: row;
 }
