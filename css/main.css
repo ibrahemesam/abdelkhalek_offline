@@ -323,3 +323,8 @@ input[type=number] {
   -moz-appearance: textfield; /* Firefox */
   appearance: textfield;
 }
+
+label {
+  display: flex;
+  align-items: center;
+}
